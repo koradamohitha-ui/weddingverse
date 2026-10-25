@@ -1,0 +1,791 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff8f6;
+  color: #493333;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 8%;
+  background: #ffffff;
+  box-shadow: 0 2px 15px rgba(100, 40, 40, 0.08);
+}
+
+.navbar h2 {
+  color: #a34d65;
+  font-size: 25px;
+}
+
+.navbar span {
+  color: #987a7a;
+  font-size: 13px;
+}
+
+.hero {
+  text-align: center;
+  padding: 65px 20px 45px;
+  background: linear-gradient(135deg, #fff0f2, #fff8ec);
+}
+
+.tagline {
+  color: #a77b46;
+  font-size: 12px;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-family: 'Great Vibes', cursive;
+  color: #9d455e;
+  font-size: clamp(42px, 7vw, 68px);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.description {
+  margin: 18px auto 30px;
+  color: #806969;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.invitation {
+  max-width: 440px;
+  margin: 30px auto 0;
+  padding: 40px 25px;
+  background: #ffffff;
+  border: 2px solid #d6b477;
+  outline: 1px solid #d6b477;
+  outline-offset: -9px;
+  box-shadow: 0 10px 35px rgba(100, 40, 40, 0.10);
+}
+
+.small-title {
+  color: #ad8950;
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.invitation h2 {
+  font-family: 'Great Vibes', cursive;
+  color: #a34d65;
+  font-size: 43px;
+  font-weight: 400;
+  margin: 8px 0;
+  overflow-wrap: anywhere;
+}
+
+.and {
+  font-family: 'Great Vibes', cursive;
+  font-size: 30px;
+  color: #c6a05f;
+}
+
+.wedding-date {
+  margin: 22px 0 10px;
+  color: #8b6940;
+}
+
+.invitation p:last-child {
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.form-section {
+  max-width: 550px;
+  margin: 50px auto;
+  padding: 35px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(100, 40, 40, 0.08);
+}
+
+.form-section h2 {
+  color: #9d455e;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.form-section > p {
+  text-align: center;
+  color: #927c7c;
+  font-size: 13px;
+  margin-bottom: 28px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 14px 0 7px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+form input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ead8d8;
+  border-radius: 8px;
+  outline: none;
+  font-family: inherit;
+  background: #fffdfd;
+}
+
+form input:focus {
+  border-color: #bd7588;
+  box-shadow: 0 0 0 3px rgba(189, 117, 136, 0.12);
+}
+
+form button {
+  margin-top: 25px;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #a34d65, #c17b83);
+  color: white;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(163, 77, 101, 0.25);
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #fff0f2;
+  color: #986878;
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 18px 5%;
+    gap: 10px;
+  }
+
+  .navbar h2 {
+    font-size: 20px;
+  }
+
+  .navbar span {
+    font-size: 10px;
+    text-align: right;
+  }
+
+  .hero {
+    padding-top: 45px;
+  }
+
+  .form-section {
+    margin: 30px 15px;
+    padding: 25px 20px;
+  }
+}
+/* Wedding theme selection */
+
+.theme-heading {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #9d455e;
+  font-size: 16px;
+}
+
+.theme-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.theme-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 15px 5px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.theme-card span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+}
+
+.theme-card:hover {
+  transform: translateY(-3px);
+}
+
+.theme-card.selected {
+  border-color: #b68b45;
+  box-shadow: 0 0 0 2px rgba(182, 139, 69, 0.15);
+}
+
+.pink-card {
+  background: #fff0f3;
+}
+
+.white-card {
+  background: #f7f5ef;
+}
+
+.red-card {
+  background: #fae7e7;
+}
+
+/* Invitation themes */
+
+.invitation.pink {
+  background: #fffafa;
+  border-color: #d6b477;
+}
+
+.invitation.white {
+  background: #fffef8;
+  border-color: #c8c5b9;
+  outline-color: #c8c5b9;
+}
+
+.invitation.white h2 {
+  color: #777365;
+}
+
+.invitation.white .small-title,
+.invitation.white .wedding-date {
+  color: #8c8878;
+}
+
+.invitation.red {
+  background: #fff5f3;
+  border-color: #a72c3a;
+  outline-color: #a72c3a;
+}
+
+.invitation.red h2 {
+  color: #a72c3a;
+}
+
+.invitation.red .small-title,
+.invitation.red .wedding-date {
+  color: #9b343c;
+}
+
+@media (max-width: 400px) {
+  .theme-options {
+    grid-template-columns: 1fr;
+  }
+}
+.couple-photo {
+  display: block;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #d6b477;
+  margin: 20px auto;
+  box-shadow: 0 5px 18px rgba(100, 40, 40, 0.15);
+}
+.download-button {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  padding: 14px;
+  border: 2px solid #a34d65;
+  border-radius: 30px;
+  background: white;
+  color: #a34d65;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.download-button:hover {
+  background: #fff0f3;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .invitation,
+  .invitation * {
+    visibility: visible;
+  }
+
+  .invitation {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: none;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
+/* Pinterest Aesthetic WeddingVerse */
+
+body {
+  background: #fff8f7;
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #f3dce0;
+}
+
+.navbar h2 {
+  color: #b76e79;
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+}
+
+.hero {
+  background:
+    radial-gradient(ellipse at top left, #fce4ec 0%, transparent 45%),
+    radial-gradient(ellipse at bottom right, #f8eadf 0%, transparent 45%),
+    #fff8f7;
+  padding-top: 75px;
+  padding-bottom: 70px;
+}
+
+.tagline {
+  color: #b58a67;
+  letter-spacing: 5px;
+}
+
+.hero h1 {
+  color: #b76e79;
+  font-size: clamp(48px, 7vw, 76px);
+  text-shadow: 1px 2px 10px rgba(183, 110, 121, 0.10);
+}
+
+.description {
+  max-width: 420px;
+  color: #927778;
+}
+
+.invitation {
+  position: relative;
+  max-width: 460px;
+  padding: 48px 30px;
+  margin-top: 35px;
+  border: 1px solid #d9b78b;
+  outline: 1px solid #ead5bd;
+  outline-offset: -9px;
+  border-radius: 5px;
+  background: linear-gradient(145deg, #fffdfb, #fff5f4);
+  box-shadow: 0 15px 40px rgba(130, 76, 83, 0.12);
+}
+
+.invitation::before {
+  content: "❀";
+  display: block;
+  color: #c78d96;
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+
+.invitation h2 {
+  color: #b76e79;
+  font-size: 48px;
+}
+
+.invitation .and {
+  color: #c7a16b;
+  font-size: 35px;
+}
+
+.invitation .small-title {
+  color: #b58a67;
+  letter-spacing: 4px;
+}
+
+.invitation .wedding-date {
+  color: #a57c62;
+  letter-spacing: 1px;
+}
+
+.couple-photo {
+  width: 175px;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #f3dce0;
+  outline: 1px solid #d9b78b;
+  outline-offset: 4px;
+  margin: 25px auto;
+}
+
+.form-section {
+  border: 1px solid #f3dce0;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #ffffff, #fff8f7);
+  box-shadow: 0 15px 40px rgba(130, 76, 83, 0.08);
+}
+
+.form-section h2 {
+  color: #b76e79;
+  font-family: 'Great Vibes', cursive;
+  font-size: 38px;
+}
+
+form input {
+  border-color: #f0dce0;
+  background: #fffdfd;
+}
+
+form input:focus {
+  border-color: #c78d96;
+  box-shadow: 0 0 0 3px rgba(199, 141, 150, 0.15);
+}
+
+form button[type="submit"] {
+  background: linear-gradient(135deg, #c78391, #b76e79);
+  box-shadow: 0 6px 16px rgba(183, 110, 121, 0.15);
+}
+
+.download-button {
+  border-color: #c78391;
+  color: #b76e79;
+  background: #fffdfd;
+}
+
+.download-button:hover {
+  background: #fff0f3;
+}
+
+footer {
+  background: #fcebed;
+  color: #a76f79;
+  letter-spacing: 1px;
+  padding: 30px 15px;
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  .invitation {
+    border: 1px solid #d9b78b;
+    box-shadow: none;
+  }
+}
+.wedding-time {
+  margin-top: 10px;
+  color: #a57c62;
+  font-size: 13px;
+}
+
+.invitation-message {
+  max-width: 320px;
+  margin: 22px auto 0;
+  color: #987779;
+  font-family: 'Great Vibes', cursive;
+  font-size: 25px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+form textarea {
+  width: 100%;
+  padding: 13px;
+  margin-top: 5px;
+  border: 1px solid #f0dce0;
+  border-radius: 8px;
+  outline: none;
+  resize: vertical;
+  font-family: 'Poppins', sans-serif;
+  color: #493333;
+  background: #fffdfd;
+}
+
+form textarea:focus {
+  border-color: #c78d96;
+  box-shadow: 0 0 0 3px rgba(199, 141, 150, 0.15);
+}
+/* Professional WeddingVerse finishing touches */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "✿";
+  position: absolute;
+  top: 30px;
+  left: 5%;
+  font-size: 55px;
+  color: #e4bdc4;
+  opacity: 0.45;
+  transform: rotate(-20deg);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: "❀";
+  position: absolute;
+  right: 6%;
+  top: 90px;
+  font-size: 65px;
+  color: #d9bb96;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.hero h1 {
+  position: relative;
+  animation: fadeInUp 0.9s ease both;
+}
+
+.invitation {
+  animation: fadeInUp 1s ease both;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.invitation:hover {
+  box-shadow: 0 20px 45px rgba(130, 76, 83, 0.16);
+  transform: translateY(-3px);
+}
+
+.form-section {
+  scroll-margin-top: 90px;
+}
+
+.form-section h2 {
+  margin-bottom: 12px;
+}
+
+form input,
+form textarea {
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.theme-card {
+  min-height: 95px;
+}
+
+.theme-card.selected {
+  transform: translateY(-3px);
+}
+
+form button[type="submit"],
+.download-button {
+  min-height: 48px;
+}
+
+footer {
+  border-top: 1px solid #f1dce0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero::before {
+    left: 2%;
+    font-size: 35px;
+  }
+
+  .hero::after {
+    right: 2%;
+    font-size: 40px;
+  }
+
+  .invitation {
+    padding: 35px 20px;
+  }
+
+  .invitation h2 {
+    font-size: 38px;
+  }
+}
+/* WeddingVerse Template Gallery */
+
+.template-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.template-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 22px 10px;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.template-card:hover {
+  transform: translateY(-4px);
+}
+
+.template-card.selected {
+  border-color: #c18a91;
+  box-shadow: 0 5px 18px rgba(183, 110, 121, 0.15);
+}
+
+.pink-template {
+  background: linear-gradient(145deg, #fff0f3, #fce1e8);
+}
+
+.white-template {
+  background: linear-gradient(145deg, #fffdf6, #eee7d7);
+}
+
+.red-template {
+  background: linear-gradient(145deg, #fff0ef, #f4d8d8);
+}
+
+.template-emoji {
+  font-size: 34px;
+}
+
+.template-name {
+  color: #925969;
+  font-weight: 600;
+  font-size: 13px;
+  text-align: center;
+}
+
+.template-description {
+  color: #8e7778;
+  font-size: 10px;
+  text-align: center;
+}
+
+.template-action {
+  color: #ad6b7b;
+  font-size: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .template-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+/* WeddingVerse Welcome Banner */
+
+.welcome-banner {
+  text-align: center;
+  padding: 55px 20px;
+  background: linear-gradient(135deg, #fce8ed, #fff8f2, #f8e8e8);
+  border-bottom: 1px solid #f1dce0;
+}
+
+.welcome-label {
+  color: #ae7c69;
+  font-size: 11px;
+  letter-spacing: 4px;
+  margin-bottom: 18px;
+}
+
+.welcome-banner h2 {
+  max-width: 750px;
+  margin: 0 auto 15px;
+  color: #b76e79;
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(36px, 6vw, 58px);
+  font-weight: 400;
+}
+
+.welcome-banner > p:not(.welcome-label) {
+  color: #927778;
+  font-size: 13px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.welcome-button {
+  display: inline-block;
+  padding: 13px 25px;
+  background: #b76e79;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.welcome-button:hover {
+  background: #985564;
+  transform: translateY(-2px);
+}
